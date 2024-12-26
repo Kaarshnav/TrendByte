@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
+  const [menuVisible, setMenuVisible] = useState(false);
   return (
     <div className="flex items-center justify-between py-5 font-medium">
       <img src={assets.logo} className="w-36" alt="logo" />
@@ -54,6 +55,68 @@ const Navbar = () => {
             10
           </p>
         </Link>
+        <img
+          src={assets.menu_icon}
+          onClick={() => setMenuVisible(true)}
+          className="w-5 cursor-pointer sm:hidden"
+        />
+      </div>
+      {/* Side Menu for small devices , just to make it more responsive  */}
+
+      <div
+        className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white translate-all ${
+          menuVisible ? "w-full" : "w-0"
+        } `}
+      >
+        <div className="flex flex-col text-gray-600">
+          <div
+            className="flex items-center gap-4 p-3 cursor-pointer"
+            onClick={() => {
+              setMenuVisible(false);
+            }}
+          >
+            <img src={assets.dropdown_icon} className="h-4 rotate-180" />
+
+            <p> Back </p>
+          </div>
+
+          <NavLink
+            onClick={() => {
+              setMenuVisible(false);
+            }}
+            className="py-2 pl-6 border"
+            to="/"
+          >
+            Home
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              setMenuVisible(false);
+            }}
+            className="py-2 pl-6 border"
+            to="/collection"
+          >
+            Collection
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              setMenuVisible(false);
+            }}
+            className="py-2 pl-6 border"
+            to="/about"
+          >
+            About
+          </NavLink>
+          <NavLink
+            onClick={() => {
+              setMenuVisible(false);
+            }}
+            className="py-2 pl-6 border"
+            to="/contact"
+          >
+            Contact
+          </NavLink>
+        </div>
       </div>
     </div>
   );
