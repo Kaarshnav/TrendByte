@@ -27,3 +27,7 @@ Features to be included
 7. Stlying using Tailwind
 8. Cart Manangement
 9. Payment integration using stripe maybe
+
+Library used
+. React-router-dom
+. react-toastify => for notifications
