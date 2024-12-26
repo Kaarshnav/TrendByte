@@ -1,8 +1,29 @@
-# React + Vite
+Features to be included
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. SigIn/ SignUp page
+2. Authentication and Authorization
+   - mail id
+   - Google , MS account
+3. Home Screen
+   - Image Slider
+   - Seach bar with debouncing and other optimization
+   - virtualization ( for optimized list rendering)
+4. Different Categories , Filter
+   - Men
+   - Women
+   - Shirt .......
+5. Screen Navigations
 
-Currently, two official plugins are available:
+   - Home screen
+   - Product Info
+   - Cart Details
+   - Orders section
+   - Payment Page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+6. PWA
+   - Push notification
+   - Offline support
+   - serivce worker
+7. Stlying using Tailwind
+8. Cart Manangement
+9. Payment integration using stripe maybe
